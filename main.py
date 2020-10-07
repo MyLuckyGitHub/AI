@@ -26,18 +26,18 @@ try:
             with open('image_text.txt', 'w') as file:
                 file.write(text)
                 print(text)
-                sayToMe("текст был распознан и записан в файл image_text.txt")
+                sayToMe("the text was recognized and written to a file image_text.txt")
 
         if result == "read file":
             with open('image_text.txt', 'r') as file:
                 print('read!!! '+ file.read())
-                sayToMe("текст был считан из файла image_text.txt и выведен в консоль")
+                sayToMe("the text was read from a file image_text.txt and output to the console")
 
         if result == "exit":
-            sayToMe("давай до свидания")
+            sayToMe("ok, bye")
             break
 
 except sr.UnknownValueError:
-    sayToMe("Голос был не распознан")
+    sayToMe("The voice was not recognized")
 except sr.RequestError:
-    sayToMe("Что-то пошло не так")
+    sayToMe("Something went wrong")
